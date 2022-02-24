@@ -79,7 +79,24 @@ export default class chapterTwo {
         Counter.increment();
         Counter.decrement();
 
-        console.log(Counter)
+        const createAccount = () => {
+            let balance = 0;
+            return {
+                deposit: amount => {
+                    balance += amount
+                },
+                withdraw: amount => {
+                    if (balance >= amount) {
+                        balance -= amount
+                    }
+                },
+                getBalance: () => {
+                    return balance
+                },
+            }
+        }
+
+        const myAcc = createAccount();
 
         // console.log('log', f(6, 6))
         // outer:
