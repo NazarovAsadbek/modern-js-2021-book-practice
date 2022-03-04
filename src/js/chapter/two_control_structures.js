@@ -1,3 +1,4 @@
+
 export default class chapterTwo {
     constructor() {
 
@@ -41,62 +42,62 @@ export default class chapterTwo {
         //     }
         // }
 
-        function makeSizer(size) {
-            return function () {
-                document.body.style.fontSize = size + 'px';
-            };
-        };
-
-        var size12 = makeSizer(12);
-        var size14 = makeSizer(16);
-        var size16 = makeSizer(20);
-
-        document.getElementById('size-12').onclick = size12;
-        document.getElementById('size-14').onclick = size14;
-        document.getElementById('size-16').onclick = size16;
-
-        var Counter = (function () {
-            var privateCounter = 0;
-
-            function changeBy(val) {
-                privateCounter += val;
-            }
-
-            return {
-                increment: function () {
-                    changeBy(1);
-                },
-                decrement: function () {
-                    changeBy(-1);
-                },
-                value: function () {
-                    return privateCounter;
-                }
-            };
-        })();
-
-        Counter.increment();
-        Counter.increment();
-        Counter.decrement();
-
-        const createAccount = () => {
-            let balance = 0;
-            return {
-                deposit: amount => {
-                    balance += amount
-                },
-                withdraw: amount => {
-                    if (balance >= amount) {
-                        balance -= amount
-                    }
-                },
-                getBalance: () => {
-                    return balance
-                },
-            }
-        }
-
-        const myAcc = createAccount();
+        // function makeSizer(size) {
+        //     return function () {
+        //         document.body.style.fontSize = size + 'px';
+        //     };
+        // };
+        //
+        // var size12 = makeSizer(12);
+        // var size14 = makeSizer(16);
+        // var size16 = makeSizer(20);
+        //
+        // document.getElementById('size-12').onclick = size12;
+        // document.getElementById('size-14').onclick = size14;
+        // document.getElementById('size-16').onclick = size16;
+        //
+        // var Counter = (function () {
+        //     var privateCounter = 0;
+        //
+        //     function changeBy(val) {
+        //         privateCounter += val;
+        //     }
+        //
+        //     return {
+        //         increment: function () {
+        //             changeBy(1);
+        //         },
+        //         decrement: function () {
+        //             changeBy(-1);
+        //         },
+        //         value: function () {
+        //             return privateCounter;
+        //         }
+        //     };
+        // })();
+        //
+        // Counter.increment();
+        // Counter.increment();
+        // Counter.decrement();
+        //
+        // const createAccount = () => {
+        //     let balance = 0;
+        //     return {
+        //         deposit: amount => {
+        //             balance += amount
+        //         },
+        //         withdraw: amount => {
+        //             if (balance >= amount) {
+        //                 balance -= amount
+        //             }
+        //         },
+        //         getBalance: () => {
+        //             return balance
+        //         },
+        //     }
+        // }
+        //
+        // const myAcc = createAccount();
 
         // console.log('log', f(6, 6))
         // outer:
@@ -120,5 +121,18 @@ export default class chapterTwo {
         //     console.log('while end', i)
         // }
         // console.log('inited chapterTwo')
+
+        // const average = (x, ...arr) => {
+        //     console.log(arr)
+        //     return arr
+        // }
+        // console.log(...average(1, 3, 5, 6, 111, 0, 22))
+        // console.log(Math.max(...average(1, 3, 5, 6, 111, 0, 22)))
+
+        const mkString = (array, {name, age}) => {
+            console.log(array, 'array')
+            console.log(name, age, 'config')
+        }
+        const result = mkString('value', {name: 'Asadbek', age: 21})
     }
 }
